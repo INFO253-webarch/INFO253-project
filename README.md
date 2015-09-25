@@ -1,2 +1,3 @@
-# INFO253-project
-Core Project code
+WEBARCH project 1
+
+Skeleton code for project
