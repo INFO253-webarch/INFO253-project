@@ -18,10 +18,12 @@ db = shelve.open("shorten.db")
 
 @app.route('/')
 def index():
-    """Builds a template based on a GET request, with some default
-    arguments"""
+    """
+    Builds a template based on a GET request, with some default
+    arguments
+    """
 
-    return flask.render_template('home.html')
+    return flask.render_template('index.html')
 
 ###
 # Now we'd like to do this generally:
@@ -33,16 +35,18 @@ def index():
 
 @app.route("/create", methods=['POST'])
 def create():
-"""
+    """
     This POST request creates an association between a short url and a full url
     and saves it in the database (the dictionary db)
-"""
+    """
     raise NotImplementedError     
 
 @app.route("/short/<short>", methods=['GET'])
 def redirect(short):
-    """Redirect the request to the URL associated =short=, otherwise return 404
-    NOT FOUND"""
+    """
+    Redirect the request to the URL associated =short=, otherwise return 404
+    NOT FOUND
+    """
     raise NotImplementedError 
 
 if __name__ == "__main__":
